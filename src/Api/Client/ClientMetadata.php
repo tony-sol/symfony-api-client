@@ -9,9 +9,9 @@ class ClientMetadata implements ClientMetadataInterface
     /**
      * ClientMetadata constructor
      *
-     * @param string                  $method Client method to use.
-     * @param string                  $uri    Client target URI.
-     * @param \JsonSerializable|array $data   Client request data.
+     * @param string                                     $method Client method to use.
+     * @param string                                     $uri    Client target URI.
+     * @param \JsonSerializable|array<int|string, mixed> $data   Client request data.
      */
     public function __construct(
         private string $method,
@@ -43,7 +43,7 @@ class ClientMetadata implements ClientMetadataInterface
     /**
      * {@inheritdoc}
      *
-     * @return \JsonSerializable|array
+     * @return \JsonSerializable|array<int|string, mixed>
      */
     public function getData(): \JsonSerializable|array
     {

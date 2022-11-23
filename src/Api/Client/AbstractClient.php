@@ -16,8 +16,10 @@ abstract class AbstractClient implements ClientInterface
 {
     protected string $method;
 
+    /** @var array<string, string[]> */
     protected array $headers = [];
 
+    /** @var \JsonSerializable|array<mixed, mixed> */
     protected \JsonSerializable|array $request = [];
 
     protected ?string $responseObject = null;
@@ -60,7 +62,7 @@ abstract class AbstractClient implements ClientInterface
     /**
      * {@inheritdoc}
      *
-     * @param \JsonSerializable|array $request Client request.
+     * @param \JsonSerializable|array<int|string, mixed> $request Client request.
      *
      * @return ClientInterface
      */
@@ -113,7 +115,7 @@ abstract class AbstractClient implements ClientInterface
     /**
      * Build the options for the request
      *
-     * @return array
+     * @return array<string, array<string, string[]>>
      */
     protected function buildOptions(): array
     {

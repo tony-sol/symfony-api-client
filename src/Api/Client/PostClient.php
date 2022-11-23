@@ -14,10 +14,12 @@ class PostClient extends AbstractClient implements PostClientInterface
      * Build the request JSON body with the specified parameters
      *
      * @psalm-suppress MixedReturnTypeCoercion
+     * @psalm-suppress InvalidReturnType
+     * @psalm-suppress InvalidReturnStatement
      *
      * @throws Exception\RequestBuildException
      *
-     * @return array<string, mixed>
+     * @return array<string, array<string, string[]>>
      */
     protected function buildOptions(): array
     {

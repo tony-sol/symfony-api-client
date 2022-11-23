@@ -23,7 +23,7 @@ interface ClientMetadataInterface
     /**
      * Get client request
      *
-     * @return \JsonSerializable|array
+     * @return \JsonSerializable|array<int|string, mixed>
      */
     public function getData(): \JsonSerializable|array;
 }

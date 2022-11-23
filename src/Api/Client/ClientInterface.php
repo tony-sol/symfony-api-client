@@ -28,7 +28,7 @@ interface ClientInterface
     /**
      * Set client request
      *
-     * @param \JsonSerializable|array $request Client request.
+     * @param \JsonSerializable|array<int|string, mixed> $request Client request.
      *
      * @return ClientInterface
      */
